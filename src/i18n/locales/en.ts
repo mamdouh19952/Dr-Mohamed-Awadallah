@@ -1,0 +1,223 @@
+export default {
+  brand: {
+    name: 'Dr. Mohamed Awadallah',
+    sub: 'Nutrition & Weight-Loss Specialist',
+  },
+  nav: {
+    home: 'Home',
+    about: 'About',
+    services: 'Services',
+    cases: 'Cases',
+    reviews: 'Reviews',
+    contact: 'Contact',
+  },
+  common: {
+    book: 'Book a consultation',
+    bookNow: 'Book a consultation now',
+    learnMore: 'Learn more',
+    switchLang: 'العربية',
+    darkMode: 'Dark mode',
+    lightMode: 'Light mode',
+    openMenu: 'Open menu',
+    prev: 'Previous',
+    next: 'Next',
+    scrollTop: 'Back to top',
+    inquire: 'Inquire on WhatsApp',
+    back: 'Back',
+    close: 'Close',
+  },
+  hero: {
+    pill: 'Your journey starts here',
+    title: 'Lose weight the right, scientific way',
+    subtitle:
+      'Personalized weight-loss and therapeutic-nutrition programs built around each person’s health and goals — real, sustainable results without deprivation.',
+    cards: {
+      plan: { title: 'Tailored plan', desc: 'A diet built around you and your goals' },
+      track: { title: 'Continuous follow-up', desc: 'Weekly tracking of your progress' },
+      online: { title: 'Online follow-up', desc: 'Consultations from anywhere' },
+    },
+  },
+  stats: {
+    successCases: 'Success cases',
+    experience: 'Years experience',
+    satisfaction: 'Client satisfaction',
+    rating: 'Patient rating',
+  },
+  about: {
+    tag: 'About the doctor',
+    name: 'Dr. Mohamed Awadallah',
+    title: 'Therapeutic Nutrition & Weight-Loss Specialist',
+    bio: 'A specialist in therapeutic nutrition and the management of obesity and underweight, with over 16 years of experience designing personalized dietary programs. Dr. Mohamed believes every person has a different body and different needs, so every program is built on an individual health assessment.',
+    pills: {
+      degree: 'Pharmacy Degree',
+      diploma: 'Therapeutic Nutrition Diploma',
+      member: 'Egyptian Nutrition Society Member',
+    },
+    expLabel: 'Yrs experience',
+    more: 'More about the doctor',
+  },
+  process: {
+    tag: 'How we work',
+    title: 'Your journey, step by step',
+    subtitle:
+      'We follow a clear, scientific approach for every case — from the first assessment to reaching and keeping your goal.',
+    stepsLabel: 'Steps',
+    steps: {
+      s1: {
+        title: 'Initial assessment',
+        desc: 'We understand your condition, medical history, goals, and lifestyle in detail.',
+      },
+      s2: {
+        title: 'Analysis & measurements',
+        desc: 'Body-composition measurement and lab review to set your starting point.',
+      },
+      s3: {
+        title: 'Personalized plan',
+        desc: 'A diet built to fit you — food you enjoy and can stick to, without deprivation.',
+      },
+      s4: {
+        title: 'Weekly follow-up',
+        desc: 'We adjust the plan continuously based on your progress and response.',
+      },
+      s5: {
+        title: 'Reaching your goal',
+        desc: 'A healthy, sustainable result you can maintain for life.',
+      },
+    },
+  },
+  services: {
+    tag: 'What we offer',
+    title: 'Our specialized services',
+    subtitle: 'Complete nutritional care covering every need — for every age and every goal.',
+    viewAll: 'All services',
+    items: {
+      weightLoss: {
+        title: 'Personal weight-loss program',
+        desc: 'A program designed specifically for your body and goals — healthy, sustainable weight loss without deprivation.',
+      },
+      therapeutic: {
+        title: 'Therapeutic nutrition',
+        desc: 'Specialized dietary plans for people with chronic conditions such as diabetes, hypertension, and heart disease.',
+      },
+      weightGain: {
+        title: 'Weight-gain program',
+        desc: 'For those with severe thinness — a program to build muscle mass in a healthy, scientific way.',
+      },
+      sports: {
+        title: 'Sports nutrition',
+        desc: 'Nutritional plans that support athletic performance, speed recovery, and build the body correctly.',
+      },
+      children: {
+        title: 'Children & teen nutrition',
+        desc: 'Balanced dietary systems that support normal growth and overall health in children and teenagers.',
+      },
+      online: {
+        title: 'Remote follow-up (online)',
+        desc: 'Ongoing online consultations and follow-up for clients across Egypt and the Arab world.',
+      },
+    },
+  },
+  testimonials: {
+    tag: 'What they say',
+    title: 'Client reviews',
+    subtitle: 'Real reviews from clients who reached their goals with us — tap any image to view it in full.',
+    viewAll: 'All client reviews',
+    viewImage: 'View review',
+    reviewAlt: 'Client review no.',
+    items: {
+      t1: {
+        name: 'Sara Ahmed',
+        location: 'Cairo',
+        text: 'Dr. Mohamed changed my life — I lost 25 kg in 4 months without feeling any deprivation. The food plan he made for me was delicious, suitable, and easy to stick to!',
+      },
+      t2: {
+        name: 'Mahmoud Hassan',
+        location: 'Giza',
+        text: 'I was worried about dieting because I have diabetes, but Dr. Mohamed designed a safe plan suited to my condition. I lost 18 kg and my blood sugar improved greatly.',
+      },
+      t3: {
+        name: 'Nora Khaled',
+        location: 'Alexandria',
+        text: 'Online follow-up with Dr. Mohamed was excellent — he responds quickly, follows up every week, and you never feel alone on this journey.',
+      },
+    },
+  },
+  contact: {
+    tag: 'Contact us',
+    title: 'Book your consultation now',
+    subtitle: 'Your journey to a healthier body starts with one message or call.',
+    phone: { title: 'Call us' },
+    whatsapp: { title: 'WhatsApp', action: 'Message us on WhatsApp' },
+    address: {
+      title: 'Clinic',
+      line1: 'Estanha – El Bagour',
+      line2: 'Menoufia Governorate',
+    },
+    hours: {
+      title: 'Working hours',
+      days: 'Sat – Thu',
+      time: '10:00 AM – 8:00 PM',
+      online: 'Online always available',
+    },
+    mapTitle: 'Clinic location on the map',
+    openMap: 'Open location in Google Maps',
+    fullPage: 'All contact options',
+  },
+  cases: {
+    tag: 'Past cases',
+    title: 'Real success stories',
+    subtitle: 'Every case is a different weight-loss journey, with close follow-up all the way to the goal.',
+    homeTag: 'Real results',
+    homeTitle: 'Before & after',
+    homeSubtitle: 'A sample of our clients’ results — tap to view each case in detail.',
+    typeLoss: 'Weight loss',
+    durationLabel: 'Duration',
+    dateLabel: 'Date',
+    changeLabel: 'Change',
+    viewAll: 'All cases',
+    viewCase: 'Case details',
+    journeyTitle: 'Journey details',
+    notFound: 'Case not found',
+    items: {
+      c1: {
+        title: '−22 kg journey',
+        change: '−22 kg',
+        duration: '3 months',
+        date: 'March 2025',
+        desc: 'Started overweight with a health profile that needed adjusting. We designed a gradual 3-phase plan with weekly follow-up, so he lost 22 kg steadily and without deprivation, with clear gains in energy and sleep.',
+      },
+      c2: {
+        title: '−15 kg journey',
+        change: '−15 kg',
+        duration: '2 months',
+        date: 'January 2025',
+        desc: 'A fast, safe goal before an occasion. We focused on a practical, easy-to-follow plan with light activity, reaching the result in two months while preserving muscle mass.',
+      },
+      c3: {
+        title: '−30 kg journey',
+        change: '−30 kg',
+        duration: '5 months',
+        date: 'November 2024',
+        desc: 'A higher-obesity case needing a longer, phased plan. We progressed calories and activity with continuous support, losing 30 kg over 5 months and completely changing his life.',
+      },
+      c5: {
+        title: 'Diabetic −18 kg journey',
+        change: '−18 kg',
+        duration: '3 months',
+        date: 'December 2024',
+        desc: 'A diabetic patient needing safe weight loss. A plan tuned to blood-sugar readings with close follow-up — he lost 18 kg and his glucose markers improved markedly.',
+      },
+      c6: {
+        title: '−12 kg journey',
+        change: '−12 kg',
+        duration: '2 months',
+        date: 'April 2025',
+        desc: 'A moderate goal with a busy work schedule. We used a flexible plan suited to a daily routine with quick-prep meals, losing 12 kg without hurting productivity.',
+      },
+    },
+  },
+  footer: {
+    tagline: 'Your journey to a healthier body and a better life starts here',
+    rights: '© 2025 All rights reserved — Dr. Mohamed Awadallah',
+  },
+}

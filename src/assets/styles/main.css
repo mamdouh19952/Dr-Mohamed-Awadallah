@@ -1,0 +1,194 @@
+@import 'tailwindcss';
+
+/* Dark mode driven by <html data-theme="dark"> */
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+/* ── Design tokens ─────────────────────────────────────────── */
+@theme {
+  --font-sans: 'Tajawal', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'El Messiri', 'Tajawal', ui-sans-serif, system-ui, sans-serif;
+
+  /* Brand — green (doctor identity) */
+  --color-brand-50: #ecfdf3;
+  --color-brand-100: #d1fadf;
+  --color-brand-200: #a6f0c6;
+  --color-brand-300: #6ce9a6;
+  --color-brand-400: #32d583;
+  --color-brand-500: #12b76a;
+  --color-brand-600: #039855;
+  --color-brand-700: #1b6b3a;
+  --color-brand-800: #175c34;
+  --color-brand-900: #10402a;
+
+  /* Accent — amber (CTA) */
+  --color-accent-300: #fcd34d;
+  --color-accent-400: #f5b301;
+  --color-accent-500: #e0a000;
+  --color-accent-600: #b97e00;
+
+  --radius-card: 1.25rem;
+  --shadow-soft: 0 10px 30px -12px rgb(16 64 42 / 0.18);
+  --shadow-card: 0 4px 20px -8px rgb(16 64 42 / 0.12);
+}
+
+/* Theme surface variables (light default / dark override) */
+:root,
+[data-theme='light'] {
+  --surface-bg: #ffffff;
+  --surface-alt: #f2f9f5;
+  --surface-card: #ffffff;
+  --surface-border: #e4efe9;
+  --text-strong: #0f2018;
+  --text-body: #4b5a52;
+  --text-muted: #7b8a82;
+}
+
+[data-theme='dark'] {
+  --surface-bg: #0c1512;
+  --surface-alt: #101d18;
+  --surface-card: #13211b;
+  --surface-border: #1f3329;
+  --text-strong: #f1f7f4;
+  --text-body: #b9c8c1;
+  --text-muted: #8a9d94;
+}
+
+/* Map surfaces to Tailwind color utilities */
+@theme inline {
+  --color-bg: var(--surface-bg);
+  --color-alt: var(--surface-alt);
+  --color-card: var(--surface-card);
+  --color-line: var(--surface-border);
+  --color-strong: var(--text-strong);
+  --color-body: var(--text-body);
+  --color-muted: var(--text-muted);
+}
+
+/* ── Base ──────────────────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    background-color: var(--surface-bg);
+    color: var(--text-body);
+    font-family: var(--font-sans);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--text-strong);
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-500);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+/* ── Reusable component patterns (sparing @apply) ──────────── */
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3 text-base font-bold
+      transition-transform duration-200 active:scale-95 focus-visible:outline-2;
+  }
+  .btn-accent {
+    @apply bg-accent-400 text-brand-900 shadow-soft hover:brightness-105;
+  }
+  .btn-primary {
+    @apply bg-brand-700 text-white hover:bg-brand-800;
+  }
+  .btn-ghost {
+    @apply border border-line bg-transparent text-strong hover:bg-alt;
+  }
+
+  .pill {
+    @apply inline-flex items-center rounded-full bg-brand-100 px-3 py-1 text-xs font-bold
+      uppercase tracking-wide text-brand-700;
+  }
+
+  .card {
+    @apply rounded-[var(--radius-card)] border border-line bg-card shadow-card;
+  }
+
+  /* Self-running looping results strip (home signature element) */
+  .marquee {
+    overflow: hidden;
+  }
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll-ltr 45s linear infinite;
+  }
+  [dir='rtl'] .marquee-track {
+    animation-name: marquee-scroll-rtl;
+  }
+  .marquee-half {
+    display: flex;
+    gap: 1.5rem;
+    padding-inline-end: 1.5rem;
+  }
+  .marquee:hover .marquee-track,
+  .marquee:focus-within .marquee-track {
+    animation-play-state: paused;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .marquee {
+      overflow-x: auto;
+    }
+    .marquee-track {
+      animation: none;
+    }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+@keyframes marquee-scroll-ltr {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes marquee-scroll-rtl {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(50%);
+  }
+}
